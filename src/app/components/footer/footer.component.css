@@ -1,0 +1,10 @@
+.bg-danger{
+    background-color:#000000 !important;
+}
+.separador{
+    background-color: rgb(244, 188, 51);
+    height: 20px;
+}
+hr{
+    background-color: rgb(244, 188, 51)
+}

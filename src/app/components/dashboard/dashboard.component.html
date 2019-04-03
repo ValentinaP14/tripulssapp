@@ -1,0 +1,32 @@
+<div *ngIf="userverifi" class="container-fluid HeroImage">
+    
+  <div class="row  bg-danger text-center p-2 ">
+     <div class="col">
+      <button type="button" class="btn btn-outline-dark m-1  "  routerLinkActive="active" [routerLink]="['micuenta']"><i class="fas fa-home    "></i> Mi cuenta</button>
+      <button type="button" class="btn btn-outline-dark m-1 "  routerLinkActive="active" [routerLink]="['pasajero']"> <i class="fas fa-users   "></i> pasajero</button>
+      <button type="button" class="btn btn-outline-dark  m-1 " routerLinkActive="active" [routerLink]="['conductor']"> <i class="fas fa-address-card    "></i> Concuctor</button>
+     </div>
+  </div>
+
+
+  <div class="row HeroImage3 ">
+      <div class="col  ">
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+
+</div>
+<section *ngIf="!userverifi" class="text-white HeroImage d-flex align-items-center">
+  <div class="container-fluid  ">
+    <div class="row">
+
+      <article class="col-12  text-center  ">
+        <h2>Correo no verificado </h2>
+        <p>
+            porfa verifica tu correo 
+        </p>
+        <a href="#" class="btn btn-outline-dark btn-lg "  (click)="onVerificar()" routerLink="/registro">verificar</a>
+      </article>
+    </div>
+  </div>
+</section>
